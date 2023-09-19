@@ -1,10 +1,11 @@
 import React from 'react';
-import { Square } from './Square';
+import './Board.css'
+import { Square } from '../square/Square';
 
 export const Board = ({ squares, onClick }) => {
 
     return (
-        <div>
+        <div className="Board">
             <Square value='1' onClick={() => onClick('dummy value')}/>
             <Square value='2' onClick={() => onClick('dummy value')}/>
             <Square value='3' onClick={() => onClick('dummy value')}/>

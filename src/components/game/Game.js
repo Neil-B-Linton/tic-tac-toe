@@ -1,5 +1,5 @@
 import React from 'react';
-import { Board } from './Board';
+import { Board } from '../board/Board';
 
 export const Game = () => {
 
@@ -7,13 +7,13 @@ export const Game = () => {
 
     }
 
-    const jumpTo = () => {
+    // const jumpTo = () => {
 
-    }
+    // }
 
-    const renderMoves = () => {
+    // const renderMoves = () => {
 
-    }
+    // }
     
     return (
         <Board onClick={handleClick}/>
