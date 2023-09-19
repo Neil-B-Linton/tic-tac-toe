@@ -1,8 +1,9 @@
 import React from 'react';
+import './Square.css'
 
-export const Square = () => {
+export const Square = ({value, onClick}) => {
 
     return (
-        <div>Square</div>
-    )
+        <button className='Square' onClick={onClick}>{value}</button>
+        )
 }

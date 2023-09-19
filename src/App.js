@@ -4,7 +4,10 @@ import { Game } from './Game';
 const App = () => {
 
   return (
-    <div>Tic Tac Toe</div>
+    <div>
+      <h1>Tic Tac Toe</h1>
+      <Game />
+    </div>
   )
 }
 
