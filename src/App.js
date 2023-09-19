@@ -1,10 +1,13 @@
 import './App.css';
-import { Game } from './Game';
+import { Game } from './components/game/Game';
 
 const App = () => {
 
   return (
-    <div>Tic Tac Toe</div>
+    <div>
+      <h1>Tic Tac Toe</h1>
+      <Game />
+    </div>
   )
 }
 
