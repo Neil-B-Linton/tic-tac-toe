@@ -1,6 +1,6 @@
 
 
-export function determinWinner(squares) {
+export function determineWinner(squares) {
     const lineNumbers = [
         [0, 1, 2],
         [3, 4, 5],
