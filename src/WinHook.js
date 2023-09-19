@@ -16,7 +16,7 @@ export function determineWinner(squares) {
         const [a, b, c] = lineNumbers[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             return squares[a];
-        }
+        } 
     }
     return null
 

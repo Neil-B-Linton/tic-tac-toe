@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './Game.css'
 import { Board } from '../board/Board';
 import { determineWinner } from '../../WinHook';
+import { checkDraw } from '../../DrawHook';
 
 export const Game = () => {
-    const [board, setBoard] = useState(Array(9).fill(null));
-    const [xTurn, setXTurn] = useState(true);
+    const [ board, setBoard ] = useState(Array(9).fill(null));
+    const [ xTurn, setXTurn ] = useState(true);
     const winner = determineWinner(board);
-    const [ draw, setDraw ] = useState(false)
-    const [xWins, setXWins] = useState(0);
-    const [oWins, setOWins] = useState(0);
+    const draw = checkDraw(board)
+    const [ xWins, setXWins ] = useState(0);
+    const [ oWins, setOWins ] = useState(0);
     const boardCopy = [...board];
 
     const handleClick = (i) => {
@@ -19,7 +20,7 @@ export const Game = () => {
         setXTurn(!xTurn)
     }
 
-    const renderMoves = () => {
+    const resetMoves = () => {
         return (
             <button onClick={() => setBoard(Array(9).fill(null))}>Reset Game</button>
         )
@@ -42,9 +43,10 @@ export const Game = () => {
                 <p>Wins: {xWins}</p>
             </div>
             <div className='BoardWrapper'>
-                <p>{winner}</p>
+                {draw && <p>Draw Game</p>}
+                {winner && <p>{winner} Win's</p>}
                 <Board squares={board} onClick={handleClick}/>
-                {renderMoves()}
+                {resetMoves()}
             </div>
             <div className='O'>
                 <p>O</p>
