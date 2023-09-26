@@ -27,7 +27,7 @@ The small portion of the MVP has already been reached, which was to make the gam
 - Consistent wins/loses
 - Adding friends
 - Customization board / allowing users to full customize their own boards as well as tokens
-- 
+  
 
 ## Contributors (front-end)
 
