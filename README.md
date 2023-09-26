@@ -4,7 +4,6 @@
 ### Table of Contents
 - [Project Specs](#project-specs)
 - [Illustrations](#illustrations)
-- [Project Management](#project-management)
 - [Future Features](#future-features)
 - [Contributors](#contributors)
 - [Technologies](#technologies)
