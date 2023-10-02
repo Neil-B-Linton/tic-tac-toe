@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './Intro.css';
+import { useNavigate, Link } from "react-router-dom";
+
 
 export const Intro = () => {
+    const navigate = useNavigate();
 
     useEffect(() => {
-
+        setTimeout(() => {
+            navigate('/game')
+        }, 70000)
     }, [])
 
     return (
@@ -29,8 +34,9 @@ export const Intro = () => {
                     Future features will include multiplayer, login, profile customization, and adding friends.
                 </p>
                 <p>
-                    You players at this point only can play as Din Djarin "The Mandalorian" or Grogu "Baby Yoda".
+                    At this point you can only play as Din Djarin "The Mandalorian" or Grogu "Baby Yoda".
                 </p>
+                <Link>CLICK HERE TO SKIP AND GO TO GAME.</Link>
             </div>
         </div>
     </div>
