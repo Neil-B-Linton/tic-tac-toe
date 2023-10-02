@@ -1,13 +1,15 @@
-import './App.css';
 import { Game } from './components/game/Game';
+import { Intro } from './components/intro/Intro'
+import './App.css';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 
 const App = () => {
 
   return (
-    <div>
-      <h1>Tic Tac Toe</h1>
-      <Game />
-    </div>
+    <Flex w='100vw' h='100vh' bg='black' flexDirection='column' justifyContent='center' alignItems='center'>
+      {/* <Game /> */}
+      <Intro />
+    </Flex>
   )
 }
 

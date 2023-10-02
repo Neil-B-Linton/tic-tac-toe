@@ -1,9 +1,0 @@
-.Board {
-    border: 4px solid green;
-    border-radius: 10px;
-    width: 250px;
-    height: 250px; 
-    margin: 0 auto;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-}
