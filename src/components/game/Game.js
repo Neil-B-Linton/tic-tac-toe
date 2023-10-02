@@ -19,7 +19,7 @@ import {
     ModalCloseButton,
     useDisclosure,
 } from '@chakra-ui/react';
-import { FaMandalorian, FaJedi } from 'react-icons/fa'
+import { FaMandalorian, FaJedi, FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 export const Game = () => {
     const [ board, setBoard ] = useState(Array(9).fill(null));
@@ -64,6 +64,9 @@ export const Game = () => {
                     <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
                         <Icon as={FaMandalorian} boxSize={14} boxShadow='dark-lg' border='2px solid' borderRadius='full' position='absolute' zIndex={1}/>
                         <Box bg='red.100' h='100%' w='1.5rem' display='flex' alignItems='center' justifyContent='center' position='relative' zIndex='2' top='5' left='5' borderRadius='full'>{xWins}</Box>
+                    </Box>
+                    <Box>
+                        {xTurn ? <Icon boxSize='10' as={FaArrowLeft}/> : <Icon boxSize='10' as={FaArrowRight}/>}
                     </Box>
                     <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
                         <Icon as={FaJedi} boxSize={14} boxShadow='dark-lg' border='2px solid' borderRadius='full' position='absolute' zIndex={1}/>
